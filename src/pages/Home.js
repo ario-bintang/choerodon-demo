@@ -4,8 +4,10 @@ import Button from 'choerodon-ui/pro/lib/button/Button';
 function Home() {
   return (
     <>
-      <h1 className='test'>Home Page</h1>
-      <Button color=''>Choerodon Button</Button>
+      <div>
+        <h1 className='test'>Home Page</h1>
+        <Button color='primary'>Choerodon Button</Button>
+      </div>
     </>
   )
 

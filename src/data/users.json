@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "code": "EMP001",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 2,
+        "name": "Bob Smith",
+        "code": "EMP002",
+        "sex": "Male",
+        "active": false
+    },
+    {
+        "id": 3,
+        "name": "Carol Williams",
+        "code": "EMP003",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 4,
+        "name": "David Brown",
+        "code": "EMP004",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 5,
+        "name": "Ella Davis",
+        "code": "EMP005",
+        "sex": "Female",
+        "active": false
+    },
+    {
+        "id": 6,
+        "name": "Frank Wilson",
+        "code": "EMP006",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 7,
+        "name": "Grace Martinez",
+        "code": "EMP007",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 8,
+        "name": "Henry Lee",
+        "code": "EMP008",
+        "sex": "Male",
+        "active": false
+    },
+    {
+        "id": 9,
+        "name": "Isabella Clark",
+        "code": "EMP009",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 10,
+        "name": "Jack Lewis",
+        "code": "EMP010",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 11,
+        "name": "Katie Walker",
+        "code": "EMP011",
+        "sex": "Female",
+        "active": false
+    },
+    {
+        "id": 12,
+        "name": "Liam Hall",
+        "code": "EMP012",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 13,
+        "name": "Mia Allen",
+        "code": "EMP013",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 14,
+        "name": "Nathan Young",
+        "code": "EMP014",
+        "sex": "Male",
+        "active": false
+    },
+    {
+        "id": 15,
+        "name": "Olivia King",
+        "code": "EMP015",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 16,
+        "name": "Paul Wright",
+        "code": "EMP016",
+        "sex": "Male",
+        "active": true
+    }
+]
