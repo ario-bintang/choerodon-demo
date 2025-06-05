@@ -5,6 +5,8 @@ import EditUser from '../pages/EditUser';
 import AddUser from '../pages/AddUser';
 import Clubs from '../pages/Clubs';
 import ClubDetail from '../pages/ClubDetail';
+import EasyTable2 from '../pages/EasyTable2';
+import UserProfile from '../pages/UserProfile';
 
 const routes = [
   {
@@ -19,6 +21,14 @@ const routes = [
   {
     path: '/users',
     component: EasyTable,
+  },
+  {
+    path: '/profile/:id',
+    component: UserProfile,
+  },
+  {
+    path: '/easy-table',
+    component: EasyTable2,
   },
   {
     path: '/clubs',

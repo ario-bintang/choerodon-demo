@@ -21,7 +21,7 @@ export const columns = (handleDelete, handleToggleActive) => [
         header: 'Action',
         renderer: ({ record }) => (
             <div className="icons-container">
-                <Link to={`/add`}>
+                <Link to={`/profile/${record.get('id')}`}>
                     <Icon className="my-icon" type="visibility-o" />
                 </Link>
                 <Link to={`/edit/${record.get('id')}`}>

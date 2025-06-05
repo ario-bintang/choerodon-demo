@@ -7,7 +7,7 @@ const Clubs = () => {
     const [imageLoading, setImageLoading] = useState({});
 
     const handleImageLoad = (id) => {
-        const delay = 700 + Math.random() * 800; // 0.7–1.5 seconds
+        const delay = 700 + Math.random() * 800; 
         setTimeout(() => {
             setImageLoading((prev) => ({ ...prev, [id]: false }));
         }, delay);

@@ -2,10 +2,21 @@
 @import '~choerodon-ui/dist/choerodon-ui-pro.css';
 
 .my-container {
-  padding: 2em;
-  background-color: palegreen;
+  padding: 0.5em 1em;
   min-height: 2rem;
+  gap:1em;
 }
+
+.my-card {
+  background-color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.my-card:hover {
+  transform: scale(1.05);
+}
+
 
 .my-columns {
   flex-direction: column;

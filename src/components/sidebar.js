@@ -31,6 +31,9 @@ class SiderDemo extends React.Component {
                         <Menu.Item key="4" icon={<Icon type="table" />}>
                             <Link to="/clubs">Clubs</Link>
                         </Menu.Item>
+                        <Menu.Item key="5" icon={<Icon type="table" />}>
+                            <Link to="/easy-table">Pagination Example</Link>
+                        </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout>
