@@ -5,7 +5,7 @@ import { getUsers, addUser, updateUser, deleteUser } from '../helper/userApi';
 
 const userDataSet = new DataSet({
     autoQuery: true,
-    pageSize: 5,
+    pageSize: 10,
     transport: {
         read: () => {
             const data = getUsers();

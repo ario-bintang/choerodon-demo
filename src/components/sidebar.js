@@ -26,15 +26,15 @@ class SiderDemo extends React.Component {
                             <Link to="/test">Test</Link>
                         </Menu.Item>
                         <Menu.Item key="3" icon={<Icon type="table" />}>
-                            <Link to="/easy-table">Easy Table</Link>
+                            <Link to="/users">Users</Link>
                         </Menu.Item>
                         <Menu.Item key="4" icon={<Icon type="table" />}>
-                            <Link to="/easy-table2">Easy Table 2</Link>
+                            <Link to="/clubs">Clubs</Link>
                         </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout>
-                    <Header style={{ background: '#fff', padding: 0 }} />
+                    <Header style={{ background: '#002140', padding: "0 1em" }}><h1 style={{color:'whitesmoke'}}>Ario's Choerodon Demo App</h1></Header>
                     <Content style={{ margin: '0 16px' }}>
                         <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
                             {/* Render routes here */}

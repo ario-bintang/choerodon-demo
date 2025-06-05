@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Football Club",
+    "description": "For lovers of the beautiful game. Weekly training sessions and monthly friendly matches.",
+    "img":"/assets/football.jpg",
+    "members": [1, 3, 5, 7],
+    "meeting_day": "Thursday",
+    "time": "17:00",
+    "location": "Company Field A"
+  },
+  {
+    "id": 2,
+    "name": "Hiking Club",
+    "description": "Explore nature and stay fit. Monthly hikes organized to nearby trails and mountains.",
+    "img":"/assets/hiking.jpg",
+    "members": [2, 4, 6, 8, 10],
+    "meeting_day": "Saturday",
+    "time": "07:00",
+    "location": "Trailhead Car Park"
+  },
+  {
+    "id": 3,
+    "name": "Jazz Club",
+    "description": "A place for musicians to jam and perform smooth jazz. Rehearsals and live company events.",
+    "img":"/assets/jazz.jpg",
+    "members": [3, 6, 9],
+    "meeting_day": "Wednesday",
+    "time": "18:00",
+    "location": "Music Room"
+  },
+  {
+    "id": 4,
+    "name": "Pawparents",
+    "description": "For animal lovers and pet owners. Share tips, organize adoption events, and pet playdates.",
+    "img":"/assets/pawparents.jpg",
+    "members": [1, 2, 5, 7, 9],
+    "meeting_day": "Monday",
+    "time": "12:00",
+    "location": "Break Room B"
+  }
+]

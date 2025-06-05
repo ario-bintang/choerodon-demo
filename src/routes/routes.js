@@ -1,8 +1,10 @@
 import EasyTable from '../pages/EasyTable';
-import EasyTable2 from '../pages/EasyTable2';
 import Home from '../pages/Home';
 import Test from '../pages/Test';
 import EditUser from '../pages/EditUser';
+import AddUser from '../pages/AddUser';
+import Clubs from '../pages/Clubs';
+import ClubDetail from '../pages/ClubDetail';
 
 const routes = [
   {
@@ -15,16 +17,24 @@ const routes = [
     component: Test,
   },
   {
-    path: '/easy-table',
+    path: '/users',
     component: EasyTable,
   },
   {
-    path: '/easy-table2',
-    component: EasyTable2,
+    path: '/clubs',
+    component: Clubs,
+  },
+  {
+    path: '/clubs/:id',
+    component: ClubDetail,
   },
   {
     path: '/edit/:id',
     component: EditUser,
+  },
+  {
+    path: '/add',
+    component: AddUser,
   }
 ];
 

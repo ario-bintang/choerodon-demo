@@ -110,5 +110,117 @@
         "code": "EMP016",
         "sex": "Male",
         "active": true
+    },
+    {
+        "id": 17,
+        "name": "Daniel Thompson",
+        "code": "EMP004",
+        "sex": "Male",
+        "active": false
+    },
+    {
+        "id": 18,
+        "name": "Emily Harris",
+        "code": "EMP005",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 19,
+        "name": "Frank Martin",
+        "code": "EMP006",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 20,
+        "name": "Grace White",
+        "code": "EMP007",
+        "sex": "Female",
+        "active": false
+    },
+    {
+        "id": 21,
+        "name": "Henry Garcia",
+        "code": "EMP008",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 22,
+        "name": "Isabella Young",
+        "code": "EMP009",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 23,
+        "name": "Jack Lee",
+        "code": "EMP010",
+        "sex": "Male",
+        "active": false
+    },
+    {
+        "id": 24,
+        "name": "Kate Turner",
+        "code": "EMP011",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 25,
+        "name": "Liam Scott",
+        "code": "EMP012",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 26,
+        "name": "Mia Adams",
+        "code": "EMP013",
+        "sex": "Female",
+        "active": false
+    },
+    {
+        "id": 27,
+        "name": "Noah Mitchell",
+        "code": "EMP014",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 28,
+        "name": "Olivia Perez",
+        "code": "EMP015",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 29,
+        "name": "Patrick Carter",
+        "code": "EMP016",
+        "sex": "Male",
+        "active": false
+    },
+    {
+        "id": 30,
+        "name": "Quinn Roberts",
+        "code": "EMP017",
+        "sex": "Female",
+        "active": true
+    },
+    {
+        "id": 31,
+        "name": "Ryan Evans",
+        "code": "EMP018",
+        "sex": "Male",
+        "active": true
+    },
+    {
+        "id": 32,
+        "name": "Sophia Collins",
+        "code": "EMP019",
+        "sex": "Female",
+        "active": false
     }
 ]

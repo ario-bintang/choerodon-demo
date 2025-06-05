@@ -1,12 +1,40 @@
 @import '~choerodon-ui/dist/choerodon-ui.css';
 @import '~choerodon-ui/dist/choerodon-ui-pro.css';
 
-.App {
-  text-align: center;
+.my-container {
+  padding: 2em;
+  background-color: palegreen;
+  min-height: 2rem;
 }
 
-.test {
-  color: red;
+.my-columns {
+  flex-direction: column;
+  display: flex;
+  gap: 1em;
+}
+
+.my-icon {
+  border-radius: 100px;
+  background-color: whitesmoke;
+  padding: 2px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.icons-container {
+  min-width: 10rem;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+.App {
+  text-align: center;
 }
 
 .App-logo {

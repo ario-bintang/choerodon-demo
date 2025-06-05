@@ -23,3 +23,12 @@ export const deleteUser = (id) => {
     const users = getUsers().filter((u) => u.id !== id);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(users));
 };
+
+export const toggleUserActive = (id) => {
+  const users = getUsers().map(user =>
+    user.id === id ? { ...user, active: !user.active } : user
+  );
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(users));
+  return users;
+};
+
