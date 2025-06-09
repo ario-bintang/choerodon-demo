@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row, Card, Icon } from 'choerodon-ui';
+import { Button } from 'choerodon-ui/pro';
 
 function Home() {
   const { Meta } = Card
@@ -87,7 +88,7 @@ function Home() {
               <Meta
                 title={
                   <div style={{ color: '#002776', fontWeight: 'bold' }}>
-                  Join Club<br />Activities
+                    Join Club<br />Activities
                   </div>
                 }
                 description={
@@ -129,6 +130,9 @@ function Home() {
           </Col>
         </Row>
       </Col>
+      <Row className='my-row' style={{padding:'5em 0'}}>
+        <Button color='primary'>Try Me! </Button>
+      </Row>
     </>
   )
 }

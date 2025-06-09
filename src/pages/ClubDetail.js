@@ -4,60 +4,99 @@ import { useParams } from 'react-router-dom';
 import { Card, Row, Col, Calendar } from 'choerodon-ui';
 import MemberTable from '../components/MemberTable';
 import { Button, Modal } from 'choerodon-ui/pro';
+import moment from 'moment';
 
 const ClubDetail = () => {
-    const { id } = useParams();
-    const [club, setClub] = useState(null);
+  const { id } = useParams();
+  const [club, setClub] = useState(null);
 
-    useEffect(() => {
-        const clubs = JSON.parse(localStorage.getItem('clubs') || '[]');
-        const selected = clubs.find((c) => c.id === Number(id));
-        setClub(selected);
-    }, [id]);
+  const currentDate = moment();
+  const [value, setValue] = useState(currentDate);
+  const [selectedValue, setSelectedValue] = useState(currentDate);
 
-    const openCalendarModal = () => {
-        Modal.open({
-            title: 'Club Calendar',
-            drawer: false,
-            style: { width: '80%', height: '80%' },
-            children: <Calendar />,
-            footer: null,
-            closable: true,
-            maskClosable: true,
-        });
+  useEffect(() => {
+    const clubs = JSON.parse(localStorage.getItem('clubs') || '[]');
+    const selected = clubs.find((c) => c.id === Number(id));
+    setClub(selected);
+  }, [id]);
+
+  const openCalendarModal = () => {
+    let modalValue = value;
+    let modalSelectedValue = selectedValue;
+
+    const handleSelect = (newVal) => {
+      modalValue = newVal;
+      modalSelectedValue = newVal;
+      modal.update({
+        children: getModalContent(),
+      });
     };
 
-    if (!club) return <p>Loading...</p>;
+    const handlePanelChange = (newVal) => {
+      modalValue = newVal;
+      modal.update({
+        children: getModalContent(),
+      });
+    };
 
-
-
-    return (
-        <div style={{ minWidth: '100%' }}>
-            <Card
-                title={club.name}
-                style={{ width: '100%', marginBottom: '1em' }}
-                cover={
-                    <img
-                        alt={club.name}
-                        src={club.img}
-                        style={{ width: '100%', maxHeight: '300px', objectFit: 'cover' }}
-                    />
-                }
-            />
-
-            <Row gutter={16}>
-                <Col span={8}>
-                    <Col>
-                        <Card title="Description">{club.description}</Card>
-                        <Card title="Book Time"> <Button color='primary' onClick={openCalendarModal}>Open Calendar</Button></Card>
-                    </Col>
-                </Col>
-                <Col span={16}>
-                    <Card title="Member Table"><MemberTable memberIds={club.members} /></Card>
-                </Col>
-            </Row>
-        </div>
+    const getModalContent = () => (
+      <div style={{ padding: 24 }}>
+        <p>You selected: {modalSelectedValue.format('YYYY-MM-DD')}</p>
+        <Calendar
+          value={modalValue}
+          onSelect={handleSelect}
+          onPanelChange={handlePanelChange}
+        />
+      </div>
     );
+
+    const modal = Modal.open({
+      key: 'calendar-modal',
+      title: 'Club Calendar',
+      drawer: false,
+      style: { width: '80%', height: 'auto' },
+      children: getModalContent(),
+      footer: null,
+      closable: true,
+      maskClosable: true,
+    });
+  };
+
+  if (!club) return <p>Loading...</p>;
+
+  return (
+    <div style={{ minWidth: '100%' }}>
+      <Card
+        title={club.name}
+        style={{ width: '100%', marginBottom: '1em' }}
+        cover={
+          <img
+            alt={club.name}
+            src={club.img}
+            style={{ width: '100%', maxHeight: '300px', objectFit: 'cover' }}
+          />
+        }
+      />
+
+      <Row gutter={16}>
+        <Col span={8}>
+          <Col>
+            <Card title="Description">{club.description}</Card>
+            <Card title="Book Time">
+              <Button color="primary" onClick={openCalendarModal}>
+                Open Calendar
+              </Button>
+            </Card>
+          </Col>
+        </Col>
+        <Col span={16}>
+          <Card title="Member Table">
+            <MemberTable memberIds={club.members} />
+          </Card>
+        </Col>
+      </Row>
+    </div>
+  );
 };
 
 export default ClubDetail;

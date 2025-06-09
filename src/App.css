@@ -24,6 +24,13 @@
   gap: 1em;
 }
 
+.my-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+}
+
 .my-icon {
   border-radius: 100px;
   background-color: whitesmoke;
