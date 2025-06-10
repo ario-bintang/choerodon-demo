@@ -29,6 +29,4 @@ export const toggleUserActive = (id) => {
     user.id === id ? { ...user, active: !user.active } : user
   );
   localStorage.setItem(STORAGE_KEY, JSON.stringify(users));
-  return users;
 };
-

@@ -1,13 +1,52 @@
 import React from 'react';
-import { Col, Row, Card, Icon } from 'choerodon-ui';
+import { Col, Row, Card, Icon, Carousel, Collapse } from 'choerodon-ui';
+
+const Panel = Collapse.Panel
 
 function Test() {
+  const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
+  function onChange(a, b, c) {
+    console.log(a, b, c);
+  }
   const { Meta } = Card
   return (
     <>
       <Col className='my-columns'>
         <Row><h1>
           Home Page</h1></Row>
+        <Carousel className="c7n-slick-slide" afterChange={onChange} arrows style={{ minHeight: '8em', backgroundColor: '#0bF000' }}>
+          <Card title="Card in Carousel">
+            <p>First Carousel</p>
+          </Card>
+          <Card title="Card in Carousel">
+            <p>Second Carousel</p>
+          </Card>
+          <Card title="Card in Carousel">
+            <p>First Carousel</p>
+          </Card>
+          <div>
+            <h1>Second Carousel</h1>
+          </div>
+          <div>
+            <h1>Third Carousel</h1>
+          </div>
+
+        </Carousel>
+        <Collapse accordion>
+          <Panel header="This is panel header 1" key="1">
+            <p>{text}</p>
+          </Panel>
+          <Panel header="This is panel header 2" key="2">
+            <p>{text}</p>
+          </Panel>
+          <Panel header="This is panel header 3" key="3">
+            <p>{text}</p>
+          </Panel>
+        </Collapse>
         <Row className='my-container' gutter={12}>
           <Col span={12} className='my-card'>
             <Card
@@ -87,7 +126,7 @@ function Test() {
               <Meta
                 title={
                   <div style={{ color: '#002776', fontWeight: 'bold' }}>
-                  Mock Users<br />Data
+                    Mock Users<br />Data
                   </div>
                 }
                 description={

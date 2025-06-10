@@ -40,8 +40,8 @@ const ClubDetail = () => {
     };
 
     const getModalContent = () => (
-      <div style={{ padding: 24 }}>
-        <p>You selected: {modalSelectedValue.format('YYYY-MM-DD')}</p>
+      <div style={{ padding: 24, overflow:'scroll' }}>
+        <h2>Date selected: {modalSelectedValue.format('Do MMMM YYYY')}</h2>
         <Calendar
           value={modalValue}
           onSelect={handleSelect}

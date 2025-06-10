@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import routes from './routes/routes';
 import SiderDemo from './components/sidebar';
 import { UserProvider } from './helper/UserContext';
+import { WaterMark } from 'choerodon-ui';
 
 function App() {
   return (

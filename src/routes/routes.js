@@ -7,6 +7,7 @@ import Clubs from '../pages/Clubs';
 import ClubDetail from '../pages/ClubDetail';
 import EasyTable2 from '../pages/EasyTable2';
 import UserProfile from '../pages/UserProfile';
+import Sandbox from '../pages/Sandbox2';
 
 const routes = [
   {
@@ -17,6 +18,10 @@ const routes = [
   {
     path: '/test',
     component: Test,
+  },
+  {
+    path: '/sandbox',
+    component: Sandbox,
   },
   {
     path: '/users',

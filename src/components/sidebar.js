@@ -23,7 +23,10 @@ class SiderDemo extends React.Component {
                             <Link to="/">Home</Link>
                         </Menu.Item>
                         <Menu.Item key="2" icon={<Icon type="desktop" />}>
-                            <Link to="/test">Test</Link>
+                            <Link to="/test">Sandbox</Link>
+                        </Menu.Item>
+                        <Menu.Item key="6" icon={<Icon type="desktop" />}>
+                            <Link to="/sandbox">Sandbox2</Link>
                         </Menu.Item>
                         <Menu.Item key="3" icon={<Icon type="table" />}>
                             <Link to="/users">Users</Link>

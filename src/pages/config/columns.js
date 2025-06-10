@@ -3,10 +3,10 @@ import { Icon, CheckBox } from 'choerodon-ui/pro';
 import { Link } from 'react-router-dom';
 
 export const columns = (handleDelete, handleToggleActive) => [
-    { name: 'id' },
-    { name: 'name' },
-    { name: 'code' },
-    { name: 'sex' },
+    { name: 'id', sortable:true, sortable:true},
+    { name: 'name', sortable:true},
+    { name: 'code', sortable:true},
+    { name: 'sex', sortable:true},
     {
         name: 'active',
         renderer: ({ record }) => (
@@ -14,7 +14,7 @@ export const columns = (handleDelete, handleToggleActive) => [
                 checked={record.get('active')}
                 onChange={() => handleToggleActive(record)}
             />
-        ),
+        ), sortable:true
     },
     {
         name: 'action',

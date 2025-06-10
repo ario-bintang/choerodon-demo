@@ -1,16 +1,23 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { DataSet, Modal } from 'choerodon-ui/pro';
 import { getUsers, deleteUser, toggleUserActive } from '../../helper/userApi';
+import { sortBy } from 'lodash';
 
 const useUserTable = () => {
     const [data, setData] = useState([]);
-    const [pageSize, setPageSize] = useState(10);
+    const [filtered, setFiltered] = useState([]);
+    const [statusFilter, setStatusFilter] = useState('All');
+    const [keyword, setKeyword] = useState('');
+
+    const [pageSize, setPageSize] = useState(50);
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedCount, setSelectedCount] = useState(0);
 
     const dsRef = useRef(new DataSet({
         paging: false,
+        combineSort: true,
         selection: 'multiple',
+        autoQuery: true,
         fields: [
             { name: 'id', type: 'number', label: 'ID' },
             { name: 'name', type: 'string', label: 'Name' },
@@ -49,7 +56,7 @@ const useUserTable = () => {
 
     useEffect(() => {
         ds.loadData(paginatedData);
-    }, [paginatedData]);
+    }, [paginatedData, filtered]);
 
     const handleDelete = (id) => {
         const user = data.find((u) => u.id === id);
@@ -81,6 +88,29 @@ const useUserTable = () => {
         });
     };
 
+    const handleSearch = () => {
+        const allUsers = getUsers();
+        const lowerKeyword = keyword.toLowerCase();
+         const filtered = allUsers.filter((user) => {
+        const matchKeyword =
+            user.name.toLowerCase().includes(lowerKeyword) ||
+            user.code.toLowerCase().includes(lowerKeyword) ||
+            user.sex.toLowerCase().includes(lowerKeyword) ||
+            user.id.toString().includes(lowerKeyword);
+
+        const matchStatus =
+            statusFilter === 'All' ||
+            (statusFilter === 'Active' && user.active) ||
+            (statusFilter === 'Inactive' && !user.active);
+
+        return matchKeyword && matchStatus;
+    });
+
+    setData(filtered);
+    setCurrentPage(1);
+};
+
+
     const handleToggleActive = (record) => {
         const id = record.get('id');
         const name = record.get('name');
@@ -98,6 +128,11 @@ const useUserTable = () => {
     return {
         ds,
         data,
+        keyword,
+        setKeyword,
+        handleSearch,
+        statusFilter,
+        setStatusFilter,
         pageSize,
         currentPage,
         selectedCount,

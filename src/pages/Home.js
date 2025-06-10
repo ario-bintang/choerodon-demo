@@ -130,9 +130,6 @@ function Home() {
           </Col>
         </Row>
       </Col>
-      <Row className='my-row' style={{padding:'5em 0'}}>
-        <Button color='primary'>Try Me! </Button>
-      </Row>
     </>
   )
 }
